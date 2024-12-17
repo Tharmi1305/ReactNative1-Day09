@@ -1,31 +1,31 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Text, View , Image, StyleSheet} from "react-native";
 
 export default function Index() {
   return (
-    <View style={styles.container}>
-      <Image
-        source={require("../assets/images/react-logo.png")}
-        style={styles.header}
-      />
-      <Text style={styles.h1}>Hello World!</Text>
-      <Text>My first React Native cross platform app!</Text>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Image source = {require("../assets/images/react-logo.png")} style={styles.logo}/>
+      <Text style={styles.Text}>Hello World!</Text>
+      <Text>My First ReactNAtive cross platform app</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container : {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+  logo:{
+    width:200,
+    height:200,
+    borderStyle: "solid",
+    borderWidth : 2,
+    borderColor: "blue"
   },
-  header: {
-    width: 200,
-    height: 200,
-    objectFit: "contain",
-  },
-  h1: {
-    fontSize: 32,
-    fontWeight: 700,
-  },
-});
+  Text:{
+    color: "red",
+    fontSize : 30
+  }
+})
